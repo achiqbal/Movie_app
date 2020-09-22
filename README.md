@@ -1,3 +1,3 @@
 # Movie_app
 
-Movie app with CRUD functionality
+Movie app with CRUD functionality.
