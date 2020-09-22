@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Movie App</title>
+	<link rel="stylesheet" href="{% static 'movie/secondary.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body style="background-color:#18191A;">
+	<nav class="justify-content-around navbar navbar-expand-xl sticky-top navbar-dark bg-dark">
+		<a class="navbar-brand font-weight-bold text-primary" href="{% url 'home' %}">My Movies</a>
+		<form name="search" class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" name="query" value="{{request.GET.query}}" placeholder="Search..">
+			<button type="submit" class="btn btn-info my-2 my-sm-0">🔍</button> <!-- class="button1" type="submit" value="🔍" /> -->
+		</form>
+		<a class="nav-link font-weight-bold" href="{% url 'movie-form' %}">Create Movie</a>
+	</nav>
+	<div class="for-cards">
+		{% block content %}
+
+		{% endblock%}	
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="{% static 'movie/script.js' %}"></script>
+</body>
+</html>
+
+<!-- 🔍 -->

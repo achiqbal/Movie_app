@@ -1,0 +1,31 @@
+{% extends 'movie/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="card text-center">
+	  	<div class="card-header">
+	    New Movie / Update Movie
+	  	</div>
+  	<div class="card-body">
+	    <form method="POST" class="justify-content-center post-form" enctype="multipart/form-data">{% csrf_token %}
+	        <div class="form-group bg-white">
+			    <label for="exampleInputEmail1">{{ form|crispy }}</label>
+	       	</div>
+	        <button type="submit" class="save btn btn-primary">Submit</button>
+	   	</form>
+  	</div>
+	<div class="card-footer text-muted">
+	</div>
+	<!-- </div>
+	<div class="justify-content-center row">
+		<div class="col-4 py-4">
+			<div class="card" >
+	    		<form method="POST" class="justify-content-center post-form" enctype="multipart/form-data">{% csrf_token %}
+	        		<div class="form-group bg-white">
+			    		<label for="exampleInputEmail1">{{ form|crispy }}</label>
+	       			</div>
+	        		<button type="submit" class="save btn btn-primary">Submit</button>
+	   			</form>
+	 		</div>
+		</div>
+	</div> -->
+{% endblock %}

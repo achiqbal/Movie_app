@@ -1,0 +1,23 @@
+{% extends 'movie/base.html' %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+		{% for movie in movies %}	
+			<div class="col-4 py-4">
+			  <div class="card text-center" >
+			    <img class="card-img-top img-fluid mw-100" src="{{movie.image}}" alt="Card image cap" style="width:21.8rem; height:17rem;">
+			    <div class="card-body">
+			      <h5 class="card-title">{{ movie.title }}</h5>
+			      <p class="card-text">{{ movie.notes }}</p>
+			      <div class="main">{{ movie.rating }}
+					<i class="fa fa-star checked" id="one"></i>
+				  </div>
+			    </div>
+				<a href="{% url 'movie-detail' movie.pk %}" class="btn btn-primary">Read me</a>
+			  </div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+	{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'movie/base.html' %}
+{% block content %}
+	<div class="card text-center">
+	  	<div class="card-header">
+	    Movie Detail
+	  	</div>
+  	<div class="card-body">
+	    <img class="card-img-top img-fluid mw-100" src="{{movies.image.url}}" alt="Card image cap">
+    	<div class="card-body">
+      		<h5 class="card-title">{{ movies.title }}</h5>
+      		<p class="card-text">{{ movies.notes }}</p>
+      		<div class="main">{{ movies.rating }}
+				<i class="fa fa-star checked" id="one"></i>
+	  		</div>
+   	 		</div>
+		</div>
+  	</div>
+	<div class="card-footer text-muted">
+		<a href="{% url 'movie-update' movies.pk %}" class="btn btn-success btn-lg btn-block">Update</a>
+		<a href="{% url 'movie-delete' movies.pk %}" class="btn btn-danger btn-lg btn-block">delete</a>
+	</div>		
+{% endblock %}

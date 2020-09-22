@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+	margin: 0;
+	text-decoration: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+}
+
+body {
+	background: #18191A;
+
+}
+
+.container {
+	display: flex;
+	background: #ffffff;
+	margin: 0;
+	justify-content: space-between;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: #242526;
+	padding-top: 15px;
+	align-items: baseline;
+/*	font-family: "Montserrat", sans-serif;
+	font-weight: 500;*/
+	/*position: sticky;*/
+}
+
+ul {
+	display: flex;
+	list-style: none;
+
+}
+.box1, .box2 {
+	display: flex;
+
+}
+
+.nav1 {
+	display: inline-flex;
+	font-size: 18px;
+}
+
+.link1 , .link2 , .link3 {
+	display: flex;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	color: #408AEF;
+	text-decoration: none;
+
+}
+
+.link2:hover , .link3:hover {
+	color: #F7017A;
+
+}
+
+hr{
+	border: 2px solid #408AEF;
+}
+
+.searchbar {
+	display: flex;
+	height: 40px;
+}
+
+.bar1{
+	display: flex;
+	border-radius: 50px;
+	border-style: none;
+	width: 300px;
+	outline-style: none;
+	padding-left: 25px;
+	background-color: #18191A;
+	color: #edf0f1;
+	font-size: 20px;
+}
+.button1 {
+	display: flex;
+	border-radius: 50px;
+	border-style: none;
+	width: 47px;
+	outline-style: none ;
+	background-color: #408AEF;
+	text-decoration: none;
+	font-size: 23px;
+	cursor: pointer;
+}
+
+.button1, .bar1{
+	margin-right: -40px;
+}
+
+.container2{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	padding: 30px;
+	margin-right: 70px;
+	column-count: 4;
+}
+
+.card {
+	width: 250px;
+	height: 300px;
+	padding: 3rem 2rem;
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+	transition: 0.5s ease-in-out; 
+	border-radius: 20px;
+	margin: 0 0 0 70px;
+}
+
+
+.card:hover{
+	transform: translateY(20px);
+	border-radius: 20px;
+}
+
+.card:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,1));
+	z-index: 2;
+	transition: 0.5s all;
+	opacity: 0;
+	border-radius: 20px;
+}
+
+.card:hover:before{
+	opacity: 1;
+	border-radius: 20px;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
+}
+
+.card .info{
+	position: absolute;
+	z-index: 3;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+
+.card:hover .info {
+	opacity: 1;
+	transform: translateY(30px);
+}
+
+.card .info h1{
+	margin: 0;
+}
+
+.card .info p{
+	letter-spacing: 1px;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+.card .info .btn{
+	padding: 0.5rem 1rem;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+	border-radius: 20px;
+	margin-bottom: 30px;
+}
+
+.card .info .btn:hover{
+	box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
+.grid{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+.main {
+	padding-bottom: 25px;
+}
+
+.checked {
+color: yellow;
+}
+
+.unchecked{
+color: white;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
